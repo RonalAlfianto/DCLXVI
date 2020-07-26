@@ -17,7 +17,7 @@ from shutil import which
 import psutil
 from telethon import __version__, version
 
-from userbot import ALIVE_NAME, ALIVE_USERNAME, CMD_HELP, ALIVE_LOGO, MODULESTR, StartTime, bot
+from userbot import ALIVE_NAME, ALIVE_USERNAME, CMD_HELP, ALIVE_LOGO, UPSTREAM_REPO_BRANCH, MODULESTR, StartTime, bot
 from userbot.events import register
 
 # ================= CONSTANT =================
