@@ -134,6 +134,17 @@ REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
 # Default .alive name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 
+# Default .alive logo
+ALIVE_LOGO = os.environ.get(
+    "ALIVE_LOGO",
+    "https://telegra.ph/file/a904be2cb0ebe75a12cb6.jpg")
+
+# Default .alive username
+ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
+
+# Module crash
+MODULESTR = os.environ.get("MODULESTR", None)
+
 # Chrome stuff
 CHROME_DRIVER = os.environ.get("CHROME_DRIVER", "/usr/bin/chromedriver")
 GOOGLE_CHROME_BIN = os.environ.get(

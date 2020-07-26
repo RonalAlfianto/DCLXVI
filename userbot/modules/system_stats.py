@@ -17,7 +17,7 @@ from shutil import which
 import psutil
 from telethon import __version__, version
 
-from userbot import ALIVE_NAME, CMD_HELP, IMG, StartTime, bot
+from userbot import ALIVE_NAME, ALIVE_USERNAME, CMD_HELP, ALIVE_LOGO, MODULESTR, StartTime, bot
 from userbot.events import register
 
 # ================= CONSTANT =================
@@ -199,23 +199,22 @@ async def pipcheck(pip):
         await pip.edit("`Use .help pip to see an example`")
 
 
-@register(outgoing=True, pattern=r"^\.alive$")
+@register(outgoing=True, pattern=r"^\.(?:alive|on)\s?(.)?")
 async def amireallyalive(alive):
-    """ For .on command, check if the bot is running.  """
-    uptime = await get_readable_time((time.time() - StartTime))
-    img = IMG
-    caption = (
-        "`"
-        "I'm alive, at your services....\n"
-        f"-------------------------------\n"
-        f"👤 User             : {DEFAULTUSER}\n\n"
-        f"🐍 Python           : {python_version()}\n\n"
-        f"💻 Telethon version : {version.__version__}\n\n"
-        f"🕒 Bot Uptime       : {uptime}\n"
-        f"-------------------------------\n"
-        "`"
-    )
-    await bot.send_file(alive.chat_id, img, caption=caption)
+    """ For .alive command, check if the bot is running.  """
+    logo = ALIVE_LOGO
+    uptime = await get_readable_time((time.time() - StartTime)) 
+    output = (f"`My Detail Ubot `\n"
+             f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
+             f"┣[ 🧭 `Bot uptime :` {uptime}\n"
+             f"┣[ 👤 `User       :` {DEFAULTUSER}\n"
+             f"┣[ 🐍 `Python     :` v{python_version()}\n"
+             f"┣[ ⚙️ `Telethon   :` v{version.__version__}\n"
+             f"┣[ 👁‍🗨 `Username   :` {ALIVE_USERNAME}\n"
+             f"┣[ 🎮 `Running on :` {UPSTREAM_REPO_BRANCH}\n"
+             f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n"
+             f"`All modules loaded with ({MODULESTR}) errors`")
+    await bot.send_file(alive.chat_id, logo, caption=output)
     await alive.delete()
 
 
