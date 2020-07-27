@@ -169,7 +169,7 @@ async def _(event):
               return
           else:
              await event.delete()
-             await bot.forward_messages(event.chat_id, response.message)             
+             await bot.forward_messages(event.chat_id, response.message)     
              
              
 @register(outgoing=True, pattern="^.codename(?: |$)(.*)")
@@ -190,7 +190,7 @@ async def _(event):
               return
           else:
              await event.delete()
-             await bot.forward_messages(event.chat_id, response.message)             
+             await bot.forward_messages(event.chat_id, response.message)      
                           
                           
 @register(outgoing=True, pattern="^.whatis(?: |$)(.*)")
@@ -211,7 +211,7 @@ async def _(event):
               return
           else:
              await event.delete()
-             await bot.forward_messages(event.chat_id, response.message)             
+             await bot.forward_messages(event.chat_id, response.message)
                                                     
                                                     
 @register(outgoing=True, pattern="^.unlockbl(?: |$)(.*)")
@@ -232,7 +232,7 @@ async def _(event):
               return
           else:
              await event.delete()
-             await bot.forward_messages(event.chat_id, response.message)             
+             await bot.forward_messages(event.chat_id, response.message)
                                                                                                  
 
 @register(outgoing=True, pattern="^.tools(?: |$)(.*)")
@@ -253,7 +253,7 @@ async def _(event):
               return
           else:
              await event.delete()
-             await bot.forward_messages(event.chat_id, response.message)             
+             await bot.forward_messages(event.chat_id, response.message)
 
 
 @register(outgoing=True, pattern="^.guides(?: |$)(.*)")
@@ -274,7 +274,7 @@ async def _(event):
               return
           else:
              await event.delete()
-             await bot.forward_messages(event.chat_id, response.message)             
+             await bot.forward_messages(event.chat_id, response.message)
       
       
 @register(outgoing=True, pattern="^.models(?: |$)(.*)")
@@ -295,7 +295,7 @@ async def _(event):
               return
           else:
              await event.delete()
-             await bot.forward_messages(event.chat_id, response.message)             
+             await bot.forward_messages(event.chat_id, response.message)
              
              
 @register(outgoing=True, pattern="^.vendor(?: |$)(.*)")
@@ -316,7 +316,7 @@ async def _(event):
               return
           else:
              await event.delete()
-             await bot.forward_messages(event.chat_id, response.message)             
+             await bot.forward_messages(event.chat_id, response.message)
              
              
 @register(outgoing=True, pattern="^.latest(?: |$)(.*)")
@@ -337,7 +337,7 @@ async def _(event):
               return
           else:
              await event.delete()
-             await bot.forward_messages(event.chat_id, response.message)             
+             await bot.forward_messages(event.chat_id, response.message) 
                           
 CMD_HELP.update({
 "xiaomi":
@@ -360,6 +360,8 @@ CMD_HELP.update({
      \nUsage : Get latest MIUI versions info\
 \n\n`.firmware` (codename)\
      \nUsage : Get lastest Firmware\
+\n\n`.eu` (codename)\
+     \nUsage : Get latest Xiaomi.eu ROMs\
 \n\n`.fastboot` (codename)\
      \nUsage : Get latest fastboot MIUI\
 \n\n`.vendor` (codename)\
@@ -367,8 +369,8 @@ CMD_HELP.update({
 \n\n`.recovery` (codename)\
      \nUsage : Get latest recovery MIUI\
 \n\n`.twrp` (codename)\
-     \nUsage : Get latest TWRP Recovery\     
+     \nUsage : Get latest TWRP Recovery\
 \n\n`.pb` (codename)\
-     \nUsage : Get latest PitchBlack Recovery\     
+     \nUsage : Get latest PitchBlack Recovery\
 \n\n`.of` (codename)\
      \nUsage : Get latest ORangeFox Recovery"})
