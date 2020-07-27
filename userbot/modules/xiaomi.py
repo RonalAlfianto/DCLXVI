@@ -361,7 +361,7 @@ CMD_HELP.update({
 \n\n`.firmware` (codename)\
      \nUsage : Get lastest Firmware\
 \n\n`.eu` (codename)\
-     \nUsage : Get latest Xiaomi.eu ROMs\     
+     \nUsage : Get latest Xiaomi eu ROMs\     
 \n\n`.fastboot` (codename)\
      \nUsage : Get latest fastboot MIUI\
 \n\n`.vendor` (codename)\
