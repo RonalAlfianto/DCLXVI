@@ -24,6 +24,8 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
+modules = CMD_HELP
+
 
 async def get_readable_time(seconds: int) -> str:
     count = 0
@@ -213,6 +215,7 @@ async def amireallyalive(alive):
              f"┣[ 👁‍🗨 `Username   :` {ALIVE_USERNAME}\n"
              f"┣[ 🎮 `Running on :` {UPSTREAM_REPO_BRANCH}\n"
              f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n"
+             f"`All modules loaded:` {len(modules)}"
              f"`All modules loaded with ({MODULESTR}) errors`")
     await bot.send_file(alive.chat_id, logo, caption=output)
     await alive.delete()
