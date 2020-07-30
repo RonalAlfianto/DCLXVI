@@ -215,8 +215,7 @@ async def amireallyalive(alive):
              f"┣[ 👁‍🗨 `Username   :` {ALIVE_USERNAME}\n"
              f"┣[ 🎮 `Running on :` {UPSTREAM_REPO_BRANCH}\n"
              f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n"
-             f"`All modules loaded: {len(modules)}`\n"
-             f"`All modules loaded with ({MODULESTR}) errors`\n")
+             f"`All modules loaded {len(modules)} with ({MODULESTR}) errors`\n")
     await bot.send_file(alive.chat_id, logo, caption=output)
     await alive.delete()
 
