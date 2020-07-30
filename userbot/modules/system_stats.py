@@ -17,7 +17,7 @@ from shutil import which
 import psutil
 from telethon import __version__, version
 
-from userbot import ALIVE_NAME, ALIVE_USERNAME, CMD_HELP, ALIVE_LOGO, UPSTREAM_REPO_BRANCH, MODULESTR, StartTime, bot
+from userbot import ALIVE_NAME, CMD_HELP, ALIVE_LOGO, UPSTREAM_REPO_BRANCH, MODULESTR, StartTime, bot
 from userbot.events import register
 
 # ================= CONSTANT =================
@@ -205,6 +205,7 @@ async def pipcheck(pip):
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     logo = ALIVE_LOGO
+    user = await bot.get_me()
     uptime = await get_readable_time((time.time() - StartTime)) 
     output = (f"`My Detail Ubot `\n"
              f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
@@ -212,7 +213,7 @@ async def amireallyalive(alive):
              f"┣[ 👤 `User       :` {DEFAULTUSER}\n"
              f"┣[ 🐍 `Python     :` v{python_version()}\n"
              f"┣[ ⚙️ `Telethon   :` v{version.__version__}\n"
-             f"┣[ 👁‍🗨 `Username   :` {ALIVE_USERNAME}\n"
+             f"┣[ 👁‍🗨 `Username   :` @{user.username}\n"
              f"┣[ 🎮 `Running on :` {UPSTREAM_REPO_BRANCH}\n"
              f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n"
              f"`All modules loaded {len(modules)} with ({MODULESTR}) errors`\n")

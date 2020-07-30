@@ -140,7 +140,7 @@
     "TERM_ALIAS": {
       "description": "Leave if u don't know",
       "value": "",
-      "required": false
+      "required": true
     },
     "BOT_TOKEN": {
       "description": "Create new bot and give BOT TOKEN",
@@ -155,7 +155,12 @@
     "ALIVE_NAME": {
       "description": "For .alive name",
       "value": "",
-      "required": false
+      "required": true
+    },
+    "ALIVE_LOGO": {
+      "description": "For .alive logo",
+      "value": "https://telegra.ph/file/94ff82d0666815b7b7677.mp4",
+      "required": true
     },
     "IMG_LIMIT": {
       "description": "Set limit for .img module",

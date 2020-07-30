@@ -137,13 +137,10 @@ ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 # Default .alive logo
 ALIVE_LOGO = os.environ.get(
     "ALIVE_LOGO",
-    "https://telegra.ph/file/a904be2cb0ebe75a12cb6.jpg")
-
-# Default .alive username
-ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
+    "https://telegra.ph/file/94ff82d0666815b7b7677.mp4")
 
 # Module crash
-MODULESTR = os.environ.get("MODULESTR", None)
+MODULESTR = os.environ.get("MODULESTR", "0")
 
 # Chrome stuff
 CHROME_DRIVER = os.environ.get("CHROME_DRIVER", "/usr/bin/chromedriver")
